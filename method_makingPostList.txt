@@ -1,0 +1,15 @@
+/* 게시판 만들기*/
+
+1 django-admin startproject projectname
+2 python3 manage.py startapp appname
+3 project/settings.py ; register app 
+4 app/models class 생성
+5 app/views 작성 , templates/html 작성
+6 project/urls 작성
+7 python3 manage.py makemigrations / migrate
+8 app/admin.py에
+  from .models import modelsclass
+
+  admin.site.register(modelsclass)
+  /admin 접근가능하게 createsuperuser
+  
