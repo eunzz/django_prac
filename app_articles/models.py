@@ -8,3 +8,11 @@ class Article(models.Model):
 
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
+
+  def __str__(self):
+        return self.title
+
+  tag_set = models.ManyToManyField('Tag', blank=True)
+
+class Tag(models.Model):
+  name = models.CharField(max_length=50, unique=True)
